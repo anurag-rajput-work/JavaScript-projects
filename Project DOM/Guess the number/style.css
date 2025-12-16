@@ -1,0 +1,133 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+
+    nav a {
+      color: #00e5ff;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Card */
+    #wrapper {
+      width: 420px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+
+    /* Input section */
+    .form {
+      margin-top: 25px;
+    }
+
+    #guess {
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    #guessField {
+      width: 100%;
+      height: 45px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #subt {
+      width: 100%;
+      height: 45px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      transition: 0.3s ease;
+    }
+
+    #subt:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+    }
+
+    /* Results */
+    .resultParas {
+      margin-top: 25px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .guesses,
+    .lastResult {
+      font-weight: bold;
+      color: #00e5ff;
+    }
+
+    .lowOrHi {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      #wrapper {
+        width: 90%;
+      }
+    }
+
+    #newGame {
+                background: linear-gradient(135deg, #00c6ff, #0072ff);
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 18px;
+                margin-top: 20px;
+            }
+
+            #newGame:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+            }

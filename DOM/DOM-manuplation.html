@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manuplation</title>
+</head>
+<body style="background-color: #000000; color: #fff;">
+    
+</body>
+<script>
+   let div = document.createElement('div');
+   div.className = "container";
+   div.id = "container";
+   div.setAttribute("title", "Gen-title")
+   div.style.backgroundColor = "yellow"
+   div.style.padding = '12px'
+// div.innerText = "hello world"""
+let  node = document.createTextNode("hello world")
+div.appendChild(node)
+document.body.appendChild(node)
+
+</script>
+</html>
