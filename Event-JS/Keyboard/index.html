@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="project">
+    <div class="card">
+      <h1>⌨️ Key Code Detector</h1>
+      <p>Press any key to see its details</p>
+
+      <div id="insert">
+        <div class="key">Press the key and watch magic ✨</div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+    const insert = document.getElementById('insert');
+    
+    window.addEventListener('keydown', (event) => {
+        insert.innerHTML = `
+        <div class="key">
+        <small>Key :</small>
+          ${event.key === ' ' ? 'Space' : event.key}
+        </div>
+        <div class="key">
+        <small>code :</small>
+          ${event.keyCode}
+        </div>
+        <div class="key">
+        <small>key.code : </small>
+          ${event.code}
+        </div>
+      `
+    })
+</script>
+
+</html>
