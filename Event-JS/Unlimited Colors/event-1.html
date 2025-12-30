@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div class="app">
+    <h1>🎨 Background Color Changer</h1>
+    <p>Click start to change background every second</p>
+
+    <div class="btn-group">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+  </div>
+
+</body>
+<script>
+  // genrate random color
+  let randomcolor = function () {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+   let IntervalID;
+   let Body = document.body;
+  let starchangingcolor =  () => {
+    function changecolor(){
+        Body.style.backgroundColor = randomcolor();
+    }
+   if(!IntervalID){
+     IntervalID =  setInterval(changecolor, 1000);
+   } 
+
+  }
+
+  let stopchangingcolor = () => {
+    clearInterval(IntervalID);
+    IntervalID = null;
+  }
+
+  
+  document.getElementById('start').addEventListener('click', starchangingcolor);
+
+  document.getElementById('stop').addEventListener('click', stopchangingcolor);
+</script>
+
+</html>
